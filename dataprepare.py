@@ -19,7 +19,7 @@ def build_vocab(file_path, tokenizer, max_size, min_freq):
             lin = line.strip()
             if not lin:
                 continue
-            content = lin.split('}')[0]
+            content = lin.split('\t')[0]
             for word in tokenizer(content):
                 vocab_dic[word] = vocab_dic.get(word, 0) + 1
         vocab_list = sorted([_ for _ in vocab_dic.items() if _[1] >= min_freq], key=lambda x: x[1], reverse=True)[:max_size]
@@ -48,7 +48,7 @@ def build_dataset(config, ues_word):
                 # print(line)
                 if not lin:
                     continue
-                content, label = lin.split('}')
+                content, label = lin.split('\t')
                 words_line = []
                 token = tokenizer(content)
                 seq_len = len(token)

@@ -22,13 +22,13 @@ class Config(object):
             if embedding != 'random' else None
         self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-        self.dropout = 0.9
+        self.dropout = 0.5
         self.require_improvement = 1000
         self.num_classes = len(self.class_list)
         self.n_vocab = 0
-        self.num_epochs = 20
+        self.num_epochs = 25
         self.batch_size = 128
-        self.pad_size = 50
+        self.pad_size = 25
         self.learning_rate = 1e-3
         self.embed = self.embedding_pretrained.size(1)\
             if self.embedding_pretrained is not None else 300
@@ -51,7 +51,6 @@ class Model(nn.Module):
                                    batch_first=True,bidirectional=True,dropout=config.dropout)
         self.fc = nn.Linear(config.hidden_size * 2, config.num_classes)
         self.m = nn.Softmax(dim=1)
-        self.loss_fn =nn.MSELoss(reduction='sum')
         self.conv=nn.Conv2d(1, 1, (3, 3))
 
     def forward(self, x):
@@ -62,7 +61,7 @@ class Model(nn.Module):
         out =self.conv(out)#torch.Size([128, 1, 24, 292])
         out = out.squeeze(1)
         out, hid = self.lstm(out)#torch.Size([128, 32, 256])
-        out, hid =self.gru(out)#([128, 32, 256])
+        # out, hid =self.gru(out)#([128, 32, 256])
         out = self.fc(out[:, -1, :])  # 句子最后时刻的 hidden state
         out = self.m(out)#128,60
         return out

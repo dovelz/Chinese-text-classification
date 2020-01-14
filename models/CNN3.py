@@ -8,7 +8,7 @@ import numpy as np
 class Config(object):
 
     def __init__(self, dataset, embedding):
-        self.model_name = 'CNN2'
+        self.model_name = 'RNN3'
         self.train_path = dataset + '/data/train.txt'
         self.dev_path = dataset + '/data/dev.txt'                                    # 验证集
         self.test_path = dataset + '/data/test.txt'                                  # 测试集
@@ -28,8 +28,8 @@ class Config(object):
         self.n_vocab = 0
         self.num_epochs = 30
         self.batch_size = 128
-        self.pad_size = 50
-        self.learning_rate = 0.15*1e-3
+        self.pad_size = 30
+        self.learning_rate = 0.08*1e-3
         self.embed = self.embedding_pretrained.size(1)\
             if self.embedding_pretrained is not None else 300
         self.filter_sizes = (2, 3, 4)

@@ -27,7 +27,7 @@ class Config(object):
         self.n_vocab = 0
         self.num_epochs = 50
         self.batch_size = 128
-        self.pad_size = 50
+        self.pad_size = 30
         self.learning_rate = 1e-3
         self.embed = self.embedding_pretrained.size(1)\
             if self.embedding_pretrained is not None else 300
