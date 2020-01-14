@@ -8,6 +8,7 @@
 
 ## References
 pytorch implementation: https://github.com/songyingxin/TextClassification-Pytorch
+
 Another pytorch implementation: https://github.com/galsang/CNN-sentence-classification-pytorch
 
 <br/>
@@ -23,9 +24,9 @@ tqdm
 sklearn
 
 ### Getting Data and Pretrained Word2vec
-Data: http://thuctc.thunlp.org/message(THUCNews)
+Data: http://thuctc.thunlp.org/message（THUCNews）
 
-Pretrainded Word2vec: https://pan.baidu.com/s/14k-9jsspp43ZhMxqPmsWMQ(sogou pretrained)
+Pretrainded Word2vec: https://pan.baidu.com/s/14k-9jsspp43ZhMxqPmsWMQ（sogou pretrained）
 
 More Chinese Word Vectors: https://github.com/Embedding/Chinese-Word-Vectors
 
@@ -61,6 +62,7 @@ $ python eval.py
 
 <br/>
 #### CNN3
+
 ```
 Epoch [5/30]
 Iter:    500,  Train Loss:  0.62,  Train Acc: 79.69%,  Val Loss:   0.8,  Val Acc: 77.40%,  Time: 0:00:58 *
