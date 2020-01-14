@@ -26,9 +26,10 @@ sklearn
 Data: http://thuctc.thunlp.org/message(THUCNews)
 
 Pretrainded Word2vec: https://pan.baidu.com/s/14k-9jsspp43ZhMxqPmsWMQ(sogou pretrained)
+
 More Chinese Word Vectors: https://github.com/Embedding/Chinese-Word-Vectors
 
-put the pretrained file in /dataTest/data/
+Put the pretrained file in /dataTest/data/
 
 
 ###
@@ -44,7 +45,6 @@ $ python train.py
 ```
 <br>
 
-
 <br>
 
 ### Evaluate the model
@@ -55,13 +55,11 @@ Edit test.txt and run eval.py.
 $ python eval.py
 ```
 
-
 <br/>
 
 ## Results
 
 <br/>
-
 #### CNN3
 ```
 Epoch [5/30]
