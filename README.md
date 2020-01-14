@@ -30,7 +30,7 @@ Pretrainded Word2vec: https://pan.baidu.com/s/14k-9jsspp43ZhMxqPmsWMQ（sogou pr
 
 More Chinese Word Vectors: https://github.com/Embedding/Chinese-Word-Vectors
 
-Put the pretrained file in /dataTest/data/
+ - Put the pretrained file in /dataTest/data/
 
 
 ###
@@ -59,8 +59,8 @@ $ python eval.py
 <br/>
 
 ## Results
-
 <br/>
+
 #### CNN3
 
 ```
