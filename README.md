@@ -19,9 +19,13 @@ Another pytorch implementation: https://github.com/galsang/CNN-sentence-classifi
 ### Requirements
 
 python 3.7
+
 pytorch 1.1
+
 tqdm
+
 sklearn
+
 
 ### Getting Data and Pretrained Word2vec
 Data: http://thuctc.thunlp.org/message（THUCNews）
